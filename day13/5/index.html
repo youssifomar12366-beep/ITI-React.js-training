@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5 - SVG Human Face Organs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+
+        .organ {
+            cursor: pointer;
+            transition: fill 0.2s;
+        }
+
+        #tooltip {
+            position: absolute;
+            display: none;
+            background-color: #333;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Task 5: Human Face SVG Organs</h2>
+    <p>Hover over any organ to highlight it and view its name!</p>
+
+    <svg width="400" height="400" viewBox="0 0 400 400">
+        <!-- Head -->
+        <ellipse cx="200" cy="200" rx="120" ry="150" fill="#f1c27d" stroke="#d4a359" stroke-width="4" />
+
+        <!-- Left Ear -->
+        <ellipse class="organ" data-organ="Left Ear" cx="75" cy="200" rx="15" ry="30" fill="#f1c27d" stroke="#d4a359" stroke-width="3" />
+        
+        <!-- Right Ear -->
+        <ellipse class="organ" data-organ="Right Ear" cx="325" cy="200" rx="15" ry="30" fill="#f1c27d" stroke="#d4a359" stroke-width="3" />
+
+        <!-- Left Eye -->
+        <circle class="organ" data-organ="Left Eye" cx="150" cy="160" r="20" fill="#ffffff" stroke="#333" stroke-width="3" />
+        <circle cx="150" cy="160" r="8" fill="#333" />
+
+        <!-- Right Eye -->
+        <circle class="organ" data-organ="Right Eye" cx="250" cy="160" r="20" fill="#ffffff" stroke="#333" stroke-width="3" />
+        <circle cx="250" cy="160" r="8" fill="#333" />
+
+        <!-- Nose -->
+        <polygon class="organ" data-organ="Nose" points="200,180 185,220 215,220" fill="#e0ac69" />
+
+        <!-- Mouth -->
+        <ellipse class="organ" data-organ="Mouth" cx="200" cy="270" rx="40" ry="15" fill="#e74c3c" />
+    </svg>
+
+    <div id="tooltip"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

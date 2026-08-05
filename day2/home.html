@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+
+    <h2>login</h2>
+
+    <form action="Thankyou.htm" method="get">
+        
+        
+        <input type="hidden" name="user_id" value="12345">
+
+        
+        <label for="fname">First Name</label><br>
+        <input type="text" id="fname" name="fname" required tabindex="1" accesskey="f"><br><br>
+
+        
+        <label for="lname"> Last Name:</label><br>
+        <input type="text" id="lname" name="lname" required tabindex="2" accesskey="l"><br><br>
+
+        
+        <label for="email"> Email :</label><br>
+        <input type="email" id="email" name="email" required tabindex="3" accesskey="e"><br><br>
+
+        
+        <label for="pass"> Password:</label><br>
+        <input type="password" id="pass" name="pass" required tabindex="4" accesskey="p"><br><br>
+
+    
+        <label for="rpass">   Repeat Password:</label><br>
+        <input type="password" id="rpass" name="rpass" required tabindex="5" accesskey="c"><br><br>
+
+        
+        <label for="bdate">  Birth Date:</label><br>
+        <input type="date" id="bdate" name="bdate" tabindex="6" accesskey="b"><br><br>
+
+        <!--هنا الجزء الخاص بتحديد نوع الملف يادكتوره accept-->
+        <label for="pic"> User Picture:</label><br>
+        <input type="file" id="pic" name="pic"  accept="image" tabindex="7" accesskey="i"><br><br>
+
+        
+        <fieldset>
+            <legend>Gender:</legend>
+            <input type="radio" id="male" name="gender" value="male" tabindex="8">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" tabindex="8">
+            <label for="female">Female</label>
+        </fieldset><br>
+
+        
+        <label for="faculty">Faculty :</label><br>
+        <select id="faculty" name="faculty" tabindex="9" accesskey="f">
+            <option value="cs"> ComputerSciences </option>
+            <option value="eng">Engineer</option>
+            <option value="sci">Sciences</option>
+        </select><br><br>
+
+        
+        <fieldset>
+            <legend> Interests:</legend>
+            <input type="checkbox" id="read" name="interests" value="reading">
+            <label for="read">Reading</label>
+            <input type="checkbox" id="code" name="interests" value="coding">
+            <label for="code">Programming</label>
+        </fieldset><br>
+
+        
+        <label for="about"> About You:</label><br>
+        <textarea id="about" name="about" rows="4" cols="30" tabindex="10" accesskey="a"></textarea><br><br>
+
+        
+        <input type="checkbox" id="terms" name="terms" required tabindex="11">
+        <label for="terms">أوافق على <a href="terms.html" target="_blank">الشروط والأحكام</a></label><br><br>
+
+        
+        <input type="submit" value="login" tabindex="12">
+        <input type="reset" value=" Reset" tabindex="13">
+
+    </form>
+
+</body>
+</html>

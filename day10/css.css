@@ -1,0 +1,214 @@
+/* ==========================================================================
+   1. CSS Variables & Global Reset
+   ========================================================================== */
+:root {
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-color: #e2e8f0;
+  --disabled-bg: #cbd5e1;
+  --disabled-text: #94a3b8;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 10px 15px -3px rgba(79, 70, 229, 0.2);
+  --radius: 12px;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   2. Typography & Header
+   ========================================================================== */
+h1 {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 40px;
+  letter-spacing: -0.025em;
+  position: relative;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   3. Task Cards (Div Container Styling)
+   ========================================================================== */
+body > div {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+/* Card Hover Effect */
+body > div:hover {
+  box-shadow: var(--shadow-md);
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Hide default horizontal rules for a cleaner UI */
+hr {
+  display: none;
+}
+
+/* ==========================================================================
+   4. Form Elements (Buttons & Dropdowns)
+   ========================================================================== */
+/* Dropdown (Select) */
+select {
+  appearance: none;
+  background-color: #f1f5f9;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 10px 40px 10px 16px;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition);
+  margin-right: 12px;
+  margin-bottom: 12px;
+  min-width: 200px;
+}
+
+select:hover {
+  border-color: var(--primary-color);
+  background-color: #ffffff;
+}
+
+select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* Buttons */
+button {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Button Hover State */
+button:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-1px);
+}
+
+/* Button Active State */
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Button Disabled State */
+button:disabled {
+  background-color: var(--disabled-bg);
+  color: var(--disabled-text);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   5. Dynamic Output Containers
+   ========================================================================== */
+[id^="userDetails"],
+[id$="Output"],
+#postDetails {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  border-left: 4px solid var(--primary-color);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+/* Hide empty output containers automatically */
+[id^="userDetails"]:empty,
+[id$="Output"]:empty,
+#postDetails:empty {
+  display: none;
+}
+
+/* Optional styling if images are loaded inside userDetails */
+[id^="userDetails"] img {
+  max-width: 120px;
+  border-radius: 50%;
+  margin-top: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================================
+   6. Responsive Design
+   ========================================================================== */
+@media (max-width: 640px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  body > div {
+    padding: 20px;
+  }
+
+  select, button {
+    width: 100%;
+    margin-right: 0;
+  }
+}

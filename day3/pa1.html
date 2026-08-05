@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day3css</title>
+    
+
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+
+        .navbar {
+            background-color: #1b1010;
+            position: sticky; 
+            top: 0;
+            width: 100%;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .navbar li {
+            display: inline-block; 
+        }
+        .navbar li a {
+            color: rgb(213, 182, 182);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .navbar li a:hover {
+            background-color: #555;
+        }
+        .navbar li a.active {
+            background-color: #4CAF50;
+        }
+
+        
+        .none-bullet-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+        }
+
+        
+        span#linksbar ul li > a {
+            color: red;
+            background-color: rgb(106, 35, 47);
+            text-decoration: none;
+            margin-bottom: 2px;
+            padding: 1px 10px;
+        }
+        span#linksbar ul li > a:hover {
+            color: pink;
+            background-color: red;
+        }
+
+
+        span#content > h2 + p {
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+    
+        div#loginform {
+            border: 2px dashed rgb(20,70,60);
+            padding: 5px;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+
+        
+        input[type="text"] {
+            background-color: yellow;
+            width: 100px;
+        }
+        input[type="text"]:focus {
+            background-color: white;
+        }
+        input[type="password"] {
+            width: 100px;
+        }
+
+        
+        .tabled-bordered {
+            display: table-cell;
+            padding: 10px;
+            border: 1px solid black;}
+            
+         .tabled-bordered:hover {
+           background-color: rgb(239, 40, 5); 
+          color: rgb(153, 4, 4);              
+                                 }
+        
+
+        
+             span p::after {
+             content: " Read this";
+             color: rgb(226, 226, 23);
+        }
+
+    
+        span#content > p#aboutus {
+            color: yellow;
+        }
+        span#content > p#aboutus {
+            color: rgb(197, 176, 176) !important;
+        }
+        
+        
+        #linksbar, #content {
+            box-sizing: border-box;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="navbar">
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    
+    <div id="header" style="width: 100%; background-color: rgb(182, 51, 51);">
+        <h1>This is the page header</h1>
+    </div>
+
+    <span id="linksbar" style="width: 25%; background-color: gray; float: left;">
+        
+        <div id="loginform">
+            User name: <input type="text"><br>
+            Password: <input type="password"><br>
+            <input type="checkbox"> remember me<br>
+            <input type="button" value="login">
+        </div>
+
+        <strong style="font-size: 14px;">site menu</strong>
+        
+        <ul class="none-bullet-list">
+            <li ><a href="https://www.youtube.com">link1</a></li>
+            <li><a href="https://www.youtube.com">link2</a></li>
+            <li><a href="https://www.youtube.com">link3</a></li>
+            <li><a href="https://www.youtube.com">link4</a></li>
+            <li><a href="https://www.youtube.com">link5</a></li>
+        </ul>
+    </span>
+
+    <span id="content" style="width: 75%; background-color: rgb(165, 112, 121); float: left;">
+        <div style="  clear: both; "></div>
+        <h2 style="margin-top: 0;">about us</h2>
+        
+        <p id="aboutus">This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph</p>
+
+        <div id="titles" style="margin-top: 15px;">
+            <p class="tabled-bordered">titles</p>
+            <p class="tabled-bordered">titles</p>
+            <p class="tabled-bordered">titles</p>
+        </div>
+        
+    </span>
+
+
+    <div style="clear: both; padding: 20px; font-family: sans-serif;">
+        <br>
+        <h2>The navbar will stick to the top when you reach its scroll position.</h2>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITI React G1 - Day 3 Lab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #004494;
+        }
+        .output {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-left: 4px solid #0056b3;
+            min-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TypeScript Day 3 Lab</h1>
+
+        <div class="section">
+            <h2>1 & 2. Rectangle and Square Tests</h2>
+            <button id="btn-rect">Test Rectangle</button>
+            <button id="btn-square">Test Square</button>
+            <div id="shape-results" class="output"></div>
+        </div>
+
+        <div class="section">
+            <h2>3. TypeScript Features</h2>
+            <button id="btn-features">Run TS Features</button>
+            <div id="features-results" class="output"></div>
+        </div>
+
+        <div class="section">
+            <h2>4. Design Pattern (Singleton)</h2>
+            <button id="btn-pattern">Test Design Pattern</button>
+            <div id="pattern-results" class="output"></div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

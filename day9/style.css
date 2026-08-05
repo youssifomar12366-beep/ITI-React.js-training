@@ -1,0 +1,42 @@
+/* تنسيقات بسيطة وواضحة تناسب المشروع */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#grades-container {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.course-item {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.course-item:last-child {
+    border-bottom: none;
+}
+
+.grade-excellent { color: green; font-weight: bold; }
+.grade-vgood { color: blue; font-weight: bold; }
+.grade-good { color: orange; font-weight: bold; }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4 - Web Storage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        .box {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            max-width: 400px;
+            margin: 0 auto 20px auto;
+            border-radius: 5px;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .result {
+            background-color: #e2e3e5;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>Task 4: Save Trip Info</h2>
+        
+        <label for="destinationInput">Current Selected Destination (Session):</label>
+        <input type="text" id="destinationInput" placeholder="Type destination (e.g. Paris)...">
+
+        <button type="button" id="saveBtn">Save Trip Permanently</button>
+    </div>
+
+    <div class="box">
+        <h3>Last Saved Trip (Local Storage):</h3>
+        <div id="savedTripDisplay" class="result">No saved trip found.</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

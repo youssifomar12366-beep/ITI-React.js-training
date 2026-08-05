@@ -1,0 +1,189 @@
+/* =========================================================
+   1. المتغيرات والتهيئة العامة (Reset & Variables)
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-main: #0f172a;           /* خلفية داكنة مريحة للعين */
+  --card-bg: #1e293b;           /* خلفية كروت المهام */
+  --accent-color: #38bdf8;      /* أزرق فاتح مخصص للغات البرمجة */
+  --accent-hover: #0284c7;
+  --text-primary: #f8fafc;       /* النص الرئيسي */
+  --text-muted: #94a3b8;         /* النص الفرعي */
+  --border-color: #334155;       /* لون الحدود */
+  --disabled-bg: #334155;        /* لون العناصر المعطلة */
+  --disabled-text: #64748b;
+  --radius: 12px;
+  --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  padding: 2.5rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   2. عنوان الصفحة الرئيسي (Main Header)
+   ========================================================= */
+h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #fff;
+  letter-spacing: -0.025em;
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================================
+   3. كروت المهام (Task Cards & Layout)
+   ========================================================= */
+/* تحويل كل قسم div إلى كارت مستقل */
+body > div {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+body > div:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+/* إخفاء الفواصل التقليدية لاستبدالها بالتصميم الحديث */
+hr {
+  display: none;
+}
+
+/* عناوين المهام */
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* =========================================================
+   4. العناصر التفاعلية (Inputs, Buttons, Select)
+   ========================================================= */
+/* القوائم المنسدلة */
+select {
+  appearance: none;
+  background-color: #0f172a;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+  min-width: 220px;
+  transition: var(--transition);
+  margin-right: 0.5rem;
+}
+
+select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+}
+
+/* الأزرار العامة */
+button {
+  background-color: var(--accent-color);
+  color: #0f172a;
+  font-weight: 600;
+  font-size: 0.95rem;
+  font-family: inherit;
+  padding: 0.65rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* الأزرار المعطلة (Disabled Buttons) */
+button:disabled {
+  background-color: var(--disabled-bg);
+  color: var(--disabled-text);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* =========================================================
+   5. مناطق عرض مخرجات الـ JavaScript (Outputs & User Details)
+   ========================================================= */
+div[id$="Details"], 
+div[id$="Output"] {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  background-color: #0b1120;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-color);
+  color: var(--text-muted);
+  font-family: 'Fira Code', monospace; /* خط برمجيات لعرض البيانات بشكل احترافي */
+  font-size: 0.9rem;
+  min-height: 48px;
+  word-break: break-word;
+}
+
+/* حالة عدم وجود محتوى */
+div[id$="Details"]:empty::before, 
+div[id$="Output"]:empty::before {
+  content: "Output will appear here...";
+  color: #475569;
+  font-style: italic;
+}
+
+/* تنسيق الصور التي سيتم جلبها عبر الـ JavaScript */
+div[id$="Details"] img, 
+div[id$="Output"] img {
+  max-width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 0.75rem;
+  border: 2px solid var(--accent-color);
+  display: block;
+}
+
+/* =========================================================
+   6. الشاشات الصغيرة (Responsive Design)
+   ========================================================= */
+@media (max-width: 640px) {
+  body {
+    padding: 1.5rem 0.75rem;
+  }
+  
+  select, button {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.75rem;
+  }
+}

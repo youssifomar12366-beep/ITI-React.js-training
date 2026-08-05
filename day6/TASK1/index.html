@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 Lab - Task 1</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Day 6 JavaScript Lab - Task 1</h1>
+        <p id="tip"></p>
+    </header>
+
+    <div class="container">
+
+        <!-- Assignment 2 -->
+        <div class="card">
+            <h2>Assignment 2</h2>
+
+            <button onclick="showDateTime()">
+                Show Current Date & Time
+            </button>
+
+            <p id="dateOutput"></p>
+        </div>
+
+        <!-- Assignment 3 -->
+        <div class="card">
+
+            <h2>Assignment 3</h2>
+
+            <button onclick="checkEmailString()">
+                Validate Email
+            </button>
+
+        </div>
+
+        <!-- Assignment 4 -->
+        <div class="card">
+
+            <h2>Assignment 4</h2>
+
+            <button onclick="validatePromptData()">
+                Validate Name & Email
+            </button>
+
+        </div>
+
+        <!-- Assignment 5 -->
+        <div class="card">
+
+            <h2>Assignment 5</h2>
+
+            <form id="patternForm">
+
+                <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Enter Full Name"
+                    pattern="[A-Za-z]{3,}( [A-Za-z]{3,})*"
+                    required>
+
+                <button type="submit">
+                    Submit
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- Assignment 6 -->
+
+        <div class="card">
+
+            <h2>Assignment 6</h2>
+
+            <button onclick="task6()">
+                Run Assignment 6
+            </button>
+
+            <div id="task6Output"></div>
+
+        </div>
+
+        <!-- Assignment 7 -->
+
+        <div class="card">
+
+            <h2>Assignment 7</h2>
+
+            <button onclick="task7()">
+                Run Assignment 7
+            </button>
+
+            <div id="task7Output"></div>
+
+        </div>
+
+        <!-- Assignment 8 -->
+
+        <div class="card">
+
+            <h2>Assignment 8</h2>
+
+            <button onclick="showBirthDate()">
+                Show Date
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
