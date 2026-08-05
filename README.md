@@ -1,3 +1,3 @@
-# ITI-JavaScript-Tasks
+# ITI-React.js-training
 
-Collection of JavaScript &amp; HTML5 labs and practical tasks from ITI training.
+A collection of labs and practice tasks completed during my ITI React.js training.
