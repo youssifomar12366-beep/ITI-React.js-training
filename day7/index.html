@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 7 Lab Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <!-- TASK 1 & 2: Registration Form -->
+        <section class="form-section">
+            <h2>Registration Form</h2>
+     
+            <form id="registrationForm" action="thankyou.html" method="GET">
+                
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your Name:">
+                    <span id="nameError" class="validation-message">invalid name</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <select id="city" name="city">
+                        <option value="Cairo">Cairo</option>
+                        <option value="Alexandria">Alexandria</option>
+                        <option value="Giza">Giza</option>
+                        <option value="Luxor">Luxor</option>
+                        <option value="minya">minya</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="repeatPassword">Repeat Password:</label>
+                    <input type="password" id="repeatPassword" name="repeatPassword" required>
+                    <span id="passwordError" class="validation-message">password and repeat password should be the same</span>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I accept the terms and conditions</label>
+                </div>
+
+                <div id="submitErrorMessage" class="validation-message submit-error"></div>
+
+                <button type="submit" id="registerBtn">Register</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- TASK 3: Automatic Photo Gallery -->
+        <section class="slideshow-section">
+            <h2>Automatic Photo Gallery</h2>
+            <div class="slideshow-container" id="slideshowContainer">
+                <img id="slideshowImage" src="TThatsApp Image 2026-07-26 at 3.52.19 PM.jpeg" alt="Slideshow Image">
+            </div>
+            <button id="playBtn" type="button">Play</button>
+        </section>
+
+        <hr>
+
+        <!-- TASK 4: Image Opacity Gallery -->
+        <section class="opacity-section">
+            <h2>Opacity Hover Gallery</h2>
+            <div class="opacity-gallery">
+                <img src="WhatsA1 Image 2026-07-26 at 8.51.53 PM.jpeg" alt="Pic 1">
+                <img src="TThatsApp Image 2026-07-26 at 3.52.19 PM.jpeg" alt="Pic 2">
+                <img src="WhatsA1 Image 2026-07-26 at 8.51.53 PM.jpeg" alt="Pic 3">
+                <img src="TThatsApp Image 2026-07-26 at 3.52.19 PM.jpeg" alt="Pic 4">
+                <img src="WhatsA1 Image 2026-07-26 at 8.51.53 PM.jpeg" alt="Pic 5">
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

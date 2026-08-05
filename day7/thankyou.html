@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You For Registering</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container" style="text-align: center; margin-top: 50px;">
+        <h2 id="thankYouMessage">Loading...</h2>
+        
+        <!-- Inclusion of the script tag referenced in the assignment text -->
+        <script>document.write("Thank YOU")</script>
+    </main>
+
+    <script>
+        "use strict";
+
+        // Parse query string parameters (passed via form method="GET")
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Extract fullName from the URL
+        let fullName = urlParams.get('fullName');
+
+        // Fallback in case someone loads this directly
+        if (!fullName) {
+            fullName = "User";
+        }
+
+        // Dynamically inject the message
+        const messageContainer = document.getElementById("thankYouMessage");
+        messageContainer.textContent = "Thank you "+fullName;
+    </script>
+</body>
+</html>

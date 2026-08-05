@@ -1,0 +1,87 @@
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form-group label {
+    width: 140px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group select {
+    padding: 8px;
+    width: 250px;
+    outline: none; /* إلغاء التحدي الافتراضي ليعمل البوردر الأزرق بالـ JS */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.checkbox-group label {
+    width: auto;
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+/* Validation Messages */
+.validation-message {
+    color: red;
+    display: none;
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+.submit-error {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #021d39;
+}
+
+/* Task 3: Slideshow Sizing */
+#slideshowImage {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Task 4: Side-by-side Opacity Gallery */
+.opacity-gallery {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.opacity-gallery img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    cursor: pointer;
+}
+
+.opacity-gallery img:hover {
+    opacity: 0.3;
+}
