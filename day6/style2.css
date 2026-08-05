@@ -17,8 +17,8 @@ body{
 
 /*img*/
 .images img{
-    width:50%;
-    height:50px;
+    width:20%;
+    height:20px;
     object-fit:cover;
     border-radius:10px;
     cursor:pointer;
