@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 1</title>
+    
+    <style>
+        /* تنسيق بسيط للصفحة */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 20px;
+        }
+
+        /* تنسيق الفورم (الاستمارة) */
+        form {
+            background-color: white;
+            padding: 20px;
+            border: 2px solid #ccc;
+            width: 350px;
+        }
+
+        /* عمل مسافة تحت كل حقل إدخال */
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        /* ترتيب العناوين فوق مربعات الإدخال */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* ضبط حجم مربعات الكتابة */
+        input[type="text"],
+        input[list],
+        input[type="date"] {
+            width: 90%;
+            padding: 5px;
+        }
+
+        /* تنسيق زرار التسجيل */
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 95%;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Plan Your Trip</h2>
+    
+    <form id="registrationForm">
+        
+        <div class="input-group">
+            <label for="travelerName">Full Name:</label>
+            <input type="text" id="travelerName" required pattern="[A-Za-z\s]+" title="Please enter letters only">
+        </div>
+
+        <div class="input-group">
+            <label for="destination">Choose Destination:</label>
+            <input list="destinations" id="destination" required>
+            <datalist id="destinations">
+                <option value="Paris, France"></option>
+                <option value="Tokyo, Japan"></option>
+                <option value="Cairo, Egypt"></option>
+                <option value="New York, USA"></option>
+                <option value="Sydney, Australia"></option>
+            </datalist>
+        </div>
+
+        <div class="input-group">
+            <label for="tripDate">Trip Date:</label>
+            <input type="date" id="tripDate" required>
+        </div>
+
+        <div class="input-group">
+            <label for="budget">Budget (in USD):</label>
+            <input type="range" id="budget" min="100" max="5000" value="1000">
+            <span id="budgetDisplay">1000</span>$
+        </div>
+
+        <button type="submit">Register Trip</button>
+
+    </form>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
